@@ -12,6 +12,7 @@ const currentSearch = computed(() => AppState.currentSearch);
 
 async function changePage(pageNumber) {
     try {
+        // FIXME check to see if they are on the profile page, and call changeProfilePostPage in your service
         if (currentSearch.value) {
             await postsService.changeSearchPage(pageNumber, currentSearch.value);
         } else {

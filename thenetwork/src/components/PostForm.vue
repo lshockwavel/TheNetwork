@@ -61,7 +61,7 @@ async function submitPost() {
         </div>
         <div>
             <label for="imgUrl">Image URL:</label>
-            <input type="url" id="imgUrl" v-model="postData.imgUrl" required class="form-control" />
+            <input type="url" id="imgUrl" v-model="postData.imgUrl" class="form-control" />
         </div>
         <button type="submit" class="btn btn-primary mt-1">Submit</button>
     </form>

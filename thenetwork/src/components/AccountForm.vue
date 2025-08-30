@@ -16,7 +16,7 @@ const accountData = ref({
     bio: '',
     linkedin: '',
     resume: '',
-    gitHub: '',
+    github: '',
     graduated: false
 })
 
@@ -30,7 +30,7 @@ watch(account, (newAccount) => {
             bio: newAccount.bio || '',
             linkedin: newAccount.linkedin || '',
             resume: newAccount.resume || '',
-            gitHub: newAccount.github || '',
+            github: newAccount.github || '',
             graduated: newAccount.graduated || false
         };
     }
@@ -60,6 +60,12 @@ async function saveAccount() {
         <section class="row">
             <div class="col-md-6">
                 <div>
+                    <label for="account-name">Name:</label>
+                    <input type="text" id="account-name" v-model="accountData.name" class="form-control" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div>
                     <label for="account-coverImg">Cover Image URL:</label>
                     <input type="text" id="account-coverImg" v-model="accountData.coverImg" class="form-control" />
                 </div>
@@ -86,7 +92,7 @@ async function saveAccount() {
             <div class="col-md-6">
                 <div>
                     <label for="account-github">GitHub URL:</label>
-                    <input type="text" id="account-github" v-model="accountData.gitHub" class="form-control" />
+                    <input type="text" id="account-github" v-model="accountData.github" class="form-control" />
                 </div>
             </div>
             <div class="col-md-6">
@@ -141,6 +147,7 @@ async function saveAccount() {
     // position: relative;
     height: 40vh;
     border-radius: 35px;
+    object-fit: cover;
   }
 
   .magic-card {

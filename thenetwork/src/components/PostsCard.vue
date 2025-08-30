@@ -24,6 +24,7 @@ async function likePost(postId) {
         await postsService.likeOrUnlikePost(postId);
     } catch (error) {
         console.error("Failed to like post:", error);
+        Pop.error("Failed to like post: " + error.message);
     }
 }
 
@@ -83,6 +84,7 @@ async function deletePost(postId) {
   margin-right: auto;
   object-fit: contain;
   height: 40vh;
+  max-width: 100%;
 }
 
 .clickable-profile {

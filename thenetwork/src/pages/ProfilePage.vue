@@ -56,6 +56,7 @@ async function getPostByProfileId() {
                             style="bottom: -25px; width: 32px; height: 32px;">
                             <i class="mdi mdi-school text-white"></i>
                         </span>
+                        <!-- TODO add class here -->
                         <div class="d-flex align-items-center position-absolute social-icons-row"
                             style="bottom: -25px; left: 60%;">
                             <a v-if="profile?.linkedin" :href="profile.linkedin" target="_blank" class="me-2">
